@@ -1,6 +1,6 @@
-# Leaky Distilled Monte Carlo (LDMC)
+# Quantized Sampling Distillation for Efficient Uncertainty Quantification
 
-Code for the paper "Leaky Distilled Monte Carlo" (under review).
+Code for the paper "Quantized Sampling Distillation for Efficient Uncertainty Quantification" (under review).
 
 LDMC is a teacher–student framework for uncertainty estimation. An MC-based teacher
 (MC Dropout or MC Laplace approximation) is quantized into a small set of control points,
