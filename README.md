@@ -8,27 +8,9 @@ and the student receives these control points through soft dropout layers.
 This repository contains the two instantiations, QMCD (quantized MC Dropout) and
 QMCLA (quantized MC Laplace approximation), and the DDU baseline.
 
-## Structure
+## Usage
 
-```
-mnist/      qmcd/  qmcla/  ddu/
-cifar10/    qmcd/  qmcla/  ddu/
-svhn/       qmcd/  qmcla/
-dbpedia/    qmcd/
-```
-
-Each experiment folder is self-contained. Run the scripts from inside the folder, since the
-modules are imported by name.
-
-| File | Content |
-|---|---|
-| `teacher.py` | Teacher network (ConvNet for MNIST, VGG-16 for CIFAR-10 and SVHN, DistilBERT for DBpedia-14) with the quantized dropout layers |
-| `teacher_trainer.py` | Teacher training |
-| `teacher_laplace.py` | KFAC Laplace approximation with eigenvector masks (QMCLA) |
-| `student.py` | Student network with soft dropout layers that receive the control points |
-| `evaluation.py` | KL divergence, RMSE, accuracy and AUROC per known/unknown class |
-| `main.py` | Teacher training (if no checkpoint exists), student distillation, and evaluation |
-| `ddu/main_ddu.py` | DDU baseline |
+Run the scripts from inside each experiment folder, since the modules are imported by name.
 
 SVHN uses separate scripts for the teacher-side evaluation and the student:
 
